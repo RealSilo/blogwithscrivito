@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: blogwithscrivito_development
+
+test:
+  <<: *default
+  database: blogwithscrivito_test
+
+production:
+  <<: *default
+  database: blogwithscrivito_production
+  username: blogwithscrivito
+  password: <%= ENV['BLOGWITHSCRIVITO_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
