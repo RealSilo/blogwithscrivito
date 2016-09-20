@@ -8,7 +8,9 @@ feature "deleting post" do
     sign_in(user)
     visit post_path(post)
     click_on "Delete"
-    click_on "OK"
+    page.accept_confirm do
+      click_link('OK')
+    end    
     expect(page).to have_content("this updated post")
   end
 end

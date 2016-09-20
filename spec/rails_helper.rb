@@ -8,6 +8,8 @@ require 'rspec/rails'
 require 'devise'
 require 'pundit/rspec'
 require 'capybara/rails'
+require 'capybara/poltergeist'
+Capybara.javascript_driver = :poltergeist
 # Add additional requires below this line. Rails is not loaded until this point!
 
 Shoulda::Matchers.configure do |config|
