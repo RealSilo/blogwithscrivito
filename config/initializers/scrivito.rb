@@ -6,7 +6,8 @@ Scrivito.configure do |config|
   #
   config.tenant = ENV['SCRIVITO_TENANT']
   config.api_key = ENV['SCRIVITO_API_KEY']
-  #
+
+  config.editing_auth { |env| Scrivito::User.system_user }
 
   # Disable the default routes to allow route configuration
   config.inject_preset_routes = false
