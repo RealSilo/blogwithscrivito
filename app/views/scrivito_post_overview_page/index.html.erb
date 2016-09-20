@@ -1,0 +1,7 @@
+<div id="page_wrapper">
+
+  <% @blog_posts.each do |blog_post| %>
+    <h2 class="title"><%= link_to(scrivito_value(blog_post.title), scrivito_path(blog_post)) %></h2>
+    <p class="date"><%= scrivito_tag(:div, blog_post, :created) %></p>
+  <% end %>
+</div>

@@ -1,0 +1,2 @@
+class ScrivitoAboutPageController < CmsController
+end

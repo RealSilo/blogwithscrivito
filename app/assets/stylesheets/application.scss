@@ -14,7 +14,8 @@
  *= require_self
  *= require scrivito
  */
-
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import 'normalize';
 
 html, body {

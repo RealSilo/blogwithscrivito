@@ -7,6 +7,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @posts = Post.latest
   end
 
   def new
